@@ -4,9 +4,14 @@
 
 type Query {
   me: String!
+  validateToken(token: String!): String!
+  getUserInfo: String!
 }
 
 type Mutation {
   signUp(email: String!, password: String!): String!
   signIn(email: String!, password: String!): String!
+  signInComplete(email: String!, password: String!): String!
+  refreshToken(refresh_token: String!): String!
+  logout: String!
 }
